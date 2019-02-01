@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <title>DataDuck | Главная</title>
+    <link rel="stylesheet" href="./assets/styles/main.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.21/dist/vue.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="container">
+        <header class="header">
+          <div class="header__container">
+            <div class="header__block"></div>
+            <button class="header__button button" type="button">Войти</button>
+          </div>
+        </header>
+        <main class="main">
+          <div class="main__wrapper">
+            <div class="main__left-col">
+              <h1 class="main__title">Начните торговать прямо сейчас</h1>
+              <ul class="main__list">
+                <li class="main__item">Нет спреда — торгуйте с прозрачными и точными котировками</li>
+                <li class="main__item">Достаточно депозита в $10, чтобы начать торговать</li>
+              </ul>
+              <form class="form main__form" id="app" @submit="checkForm">
+                <div class="form__row">
+                  <div class="error">
+                    <p class="form__input-error-email"> </p>
+                  </div>
+                  <label class="form__input" for="email" @click="deleteEmailError"> 
+                    <input class="form__input-area js-email-input" type="email" name="email" maxlength="100" v-model="email" id="email"/><span class="form__placeholder">Ваш e-mail</span>
+                  </label>
+                </div>
+                <div class="form__row">
+                  <div class="error">
+                    <p class="form__input-error-password"> </p>
+                  </div>
+                  <label class="form__input" for="password" @click="deletePasswordError">
+                    <input class="form__input-area js-password-input" type="password" name="password" v-model="password" id="password"/><span class="form__placeholder">Придумайте пароль</span>
+                  </label>
+                </div>
+                <div class="form__row">
+                  <div class="form__currency">   
+                    <div class="form__text">Валюта для ввода и вывода средств</div>
+                    <div class="form__radio-btns">
+                      <input class="form__radio-btn form__radio-btn_rub" type="radio" id="rub" name="currency"/>
+                      <label class="form__radio-fake" for="rub"></label>
+                      <input class="form__radio-btn form__radio-btn_dol" type="radio" id="dol" name="currency"/>
+                      <label class="form__radio-fake" for="dol"></label>
+                      <input class="form__radio-btn form__radio-btn_eur" type="radio" id="eur" name="currency"/>
+                      <label class="form__radio-fake" for="eur"></label>
+                    </div>
+                  </div>
+                </div>
+                <div class="form__row" @click="deleteCheckError">
+                  <div class="form__check-error">
+                    <p>Примите соглашение об оказании услуг</p>
+                  </div>
+                  <input class="input__check" type="checkbox" id="confirm" name="confirm"/>
+                  <label class="input__confirm" for="confirm">Я совершеннолетний, ознакомился и принимаю соглашение об оказании услуг.</label>
+                </div>
+                <div class="form__row" v-if="!userConfirm">
+                  <div class="wrong-user">
+                    <p class="wrong-user__txt">Учётная запись с указанным e-mail уже существует</p>
+                  </div>
+                </div>
+                <div class="form__row">
+                  <button class="form__btn" type="submit">Зарегистрироваться</button>
+                </div>
+              </form>
+            </div>
+            <div class="main__right-col">
+              <div class="images">
+                <div class="image__wrappe"><img class="image__macbook" src="./assets/images/mockups/macbook/dark.png" alt="macbook"/></div>
+                <div class="image__wrapper"><img class="image__iphone" src="./assets/images/mockups/iphone/frontal-black.png" alt="macbook"/></div>
+              </div>
+            </div>
+          </div>
+        </main>
+        <div class="popup" id="popup">
+          <div class="popup__wrapper">
+            <h2 class="popup__title">Укажите валюту</h2>
+            <ul class="popup__list">
+              <li class="popup__item">
+                <label class="popup__selector" for="rub">Рубль                      </label>
+              </li>
+              <li class="popup__item">
+                <label class="popup__selector" for="dol">Доллар                  </label>
+              </li>
+              <li class="popup__item">
+                <label class="popup__selector" for="eur">Евро                     </label>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./assets/scripts/index.bundle.js"></script>
+  </body>
+</html>

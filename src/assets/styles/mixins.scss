@@ -1,0 +1,22 @@
+@mixin phones {
+    @media screen and (max-width: 480px) {
+      font-size: 13px;
+      @content;
+    }
+  }
+@mixin tablets {
+    @media screen and (max-width: 768px) {
+      font-size: 15px;
+      @content;
+    }
+  }
+@mixin narrow {
+    @media screen and (max-width: 960px) {
+      @content;
+    }
+  }
+@mixin widescreen {
+    @media screen and (max-width: 1800px) {
+      @content;
+    }
+  }

@@ -1,0 +1,46 @@
+.popup{
+    position: absolute;
+    top:0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #2f3234dd;
+    &__wrapper{
+        position: absolute;
+        width: 300px;
+        top: 50%;
+        left: 50%;
+        transform:translate(-50%, -50%);
+        background-color: $background;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction:column;
+        padding: 20px;
+    }
+    &__title{
+        margin-bottom: 25px;
+    }
+    &__list{
+        display:flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        width: 270px;
+        
+    }
+    &__item{
+        list-style:none;
+    }
+    &__selector{
+        cursor: pointer;
+        display: block;
+        width: 70px;
+        height: 25px;
+        border: 1px solid $btn;
+        border-radius: 3px;
+        text-align: center;
+        line-height: 25px;
+        user-select: none;
+    }
+}
