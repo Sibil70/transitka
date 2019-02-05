@@ -41,14 +41,29 @@
         display:flex;
         align-items: center;
         justify-content: center;
-        width:440px;
+        width:460px;
+        background-image: radial-gradient(circle at 49% 0, #004779, #00223d);
     }
     @include phones {
+        width: 320px;
+        height: 568px;
+        border-radius: 3px;
+        background: url(../images/popup/vertical/obj_1.png) 8% 0 no-repeat/auto,
+                    url(../images/popup/vertical/obj_2.png) 50% 0 no-repeat/auto,
+                    url(../images/popup/vertical/obj_3.png) 95% 0 no-repeat/auto,
+                    url(../images/popup/vertical/obj_4.png) 6% 33% no-repeat/auto,
+                    url(../images/popup/vertical/obj_5.png) 18.5% 100% no-repeat/auto,
+                    url(../images/popup/vertical/obj_6.png) 87% 99% no-repeat/auto,
+                    url(../images/popup/vertical/prize_2_vertical.png) 18% 13.7% no-repeat/auto,
+                    url(../images/popup/vertical/prize_1_vertical.png) 91% 16% no-repeat/auto,
+                    radial-gradient(circle at 49% 0,#004779,#00223d);
         width:95%;
         height:97%;
         max-width:320px;
-        max-height:400px;
+        max-height:568px;
         padding:16px;
+        padding-top:213px;
+        align-items:flex-start;
     }
 }
 
@@ -64,7 +79,7 @@
         transform:scale(0.97);
     }
     @include phones {
-        top:26px;
+        top:23px;
         right:22px;
     }
     &:before {
@@ -96,11 +111,18 @@
     -webkit-transform: translateY(-50%);
     transform: translateY(-50%);
     background: url(../images/popup/obj_2.png) 100% 99% no-repeat/auto,
-    url(../images/popup/obj_1.png) 18% 29% no-repeat/auto,
-    url(../images/popup/prize_1.png) 0% 96% no-repeat/auto,
-    url(../images/popup/prize_2.png) 88% top no-repeat/auto;
+                url(../images/popup/obj_1.png) 18% 29% no-repeat/auto,
+                url(../images/popup/prize_1.png) 6% 96% no-repeat/auto,
+                url(../images/popup/prize_2.png) 88% 1% no-repeat/auto;
     @include tablets {
         display:none;
+    }
+}
+.popup__logo{
+    display:none;
+    @include phones { 
+        display:block;
+        margin-bottom: 16px
     }
 }
 
@@ -113,10 +135,17 @@
     display:flex;
     flex-direction: column;
 
+    @include tablets {
+        align-items: center;
+        text-align:center;
+        width:100%;
+    }
+
     @include phones {
         align-items: center;
         text-align:center;
         width:100%;
+        max-width: 288px;
     }
 }
 
@@ -133,6 +162,9 @@
     font-weight: bold;
     line-height: 1.19;
     color: #00d065;
+    @include phones {
+        margin-bottom:1px;
+    }
 }
 
 .popup__title-content {
@@ -142,15 +174,18 @@
     line-height: 1.25;
     @include phones {
         font-size: 24px;
+        padding:0 2px;
+        line-height: 1.25;
     }
 }
 
 .popup__text {
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
     line-height: 1.5;
-    margin-bottom: 34px;
+    margin-bottom: 35px;
     @include phones {
-        margin-bottom: 40px;
+        margin-bottom: 25px;
+        
     }
 }
 .popup__btn {
@@ -161,9 +196,9 @@
   background-color: #f31138;
   border:none;
   cursor:pointer;
-  font-size: 17px;
+  font-size: 16px;
   font-weight: bold;
-  line-height: 1.5;
+  line-height: 1;
   text-align: center;
   color:#fff;
   transition: transform .3s;
