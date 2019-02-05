@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
     <title>DataDuck | Главная</title>
     <link rel="stylesheet" href="./assets/styles/main.min.css"/>
-    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.21/dist/vue.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,600i,700&amp;amp;subset=cyrillic,latin-ext,vietnamese"/>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
   </head>
   <body>
@@ -82,19 +82,16 @@
           </div>
         </main>
         <div class="popup" id="popup">
-          <div class="popup__wrapper">
-            <h2 class="popup__title">Укажите валюту</h2>
-            <ul class="popup__list">
-              <li class="popup__item">
-                <label class="popup__selector" for="rub">Рубль                      </label>
-              </li>
-              <li class="popup__item">
-                <label class="popup__selector" for="dol">Доллар                  </label>
-              </li>
-              <li class="popup__item">
-                <label class="popup__selector" for="eur">Евро                     </label>
-              </li>
-            </ul>
+          <div class="popup__wrapper js-close-popup"></div>
+          <div class="popup__content"><a class="popup__close js-close-popup"></a>
+            <div class="popup__picture"><img class="popup__img" alt="safes" src="./assets/images/safes/safes.png"/></div>
+            <div class="popup__desc">
+              <div class="popup__title">
+                <h2 class="popup__title-cost">$ 10 000</h2><span class="popup__title-content popup__title-content--ru">уже на демо-счёте</span>
+              </div>
+              <div class="popup__text">Удвоим первый депозит</div>
+              <button class="popup__btn" type="button">Начать зарабатывать</button>
+            </div>
           </div>
         </div>
       </div>

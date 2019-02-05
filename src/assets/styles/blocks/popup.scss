@@ -1,46 +1,182 @@
-.popup{
-    position: absolute;
-    top:0;
+.popup {
+    position: fixed;
+    top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: #2f3234dd;
-    &__wrapper{
-        position: absolute;
-        width: 300px;
-        top: 50%;
-        left: 50%;
-        transform:translate(-50%, -50%);
-        background-color: $background;
-        border-radius: 10px;
-        display: flex;
+    background-color: $background;
+    z-index: 1111;
+
+}
+
+.popup__wrapper {
+    left: 0;
+    min-height: 100%;
+    min-width: 100%;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    z-index: 10;
+    right: 0;
+}
+
+.popup__content {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 560px;
+    z-index: 1200;
+    border-radius: 5px;
+    background-color: #1d344d;
+    width: 532px;
+    height: 312px;
+    background:url(../images/popup/bg.jpg) center center /cover no-repeat;
+    padding: 20px;
+    padding-left: 170px;
+    padding-top:39px;
+    
+    @include tablets {
+        padding: 20px;
+        display:flex;
         align-items: center;
         justify-content: center;
-        flex-direction:column;
-        padding: 20px;
+        width:440px;
     }
-    &__title{
-        margin-bottom: 25px;
+    @include phones {
+        width:95%;
+        height:97%;
+        max-width:320px;
+        max-height:400px;
+        padding:16px;
     }
-    &__list{
-        display:flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
-        width: 270px;
-        
+}
+
+.popup__close {
+    opacity: 0.6;
+    position: absolute;
+    top: 29px;
+    right: 31px;
+    width: 21px;
+    height: 21px;
+    cursor: pointer;
+    &:active {
+        transform:scale(0.97);
     }
-    &__item{
-        list-style:none;
+    @include phones {
+        top:26px;
+        right:22px;
     }
-    &__selector{
-        cursor: pointer;
-        display: block;
-        width: 70px;
-        height: 25px;
-        border: 1px solid $btn;
-        border-radius: 3px;
-        text-align: center;
-        line-height: 25px;
-        user-select: none;
+    &:before {
+        content: '';
+        position: absolute;
+        top: 10px;
+        width: 22px;
+        height: 2px;
+        background-color: #fff;
+        transform: rotate(-45deg);
     }
+    &:after {
+        content: '';
+        position: absolute;
+        top: 10px;
+        width: 22px;
+        height: 2px;
+        background-color: #fff;
+        transform: rotate(45deg);
+    }
+}
+
+.popup__picture {
+    width: 266px;
+    height:478px;
+    position: absolute;
+    top: 50%;
+    left: -88px;
+    transform: translate(0, -50%);
+    background:url(../images/popup/prize_1.png) center bottom no-repeat /contain, url(../images/popup/prize_2.png) 100% top no-repeat /70% 40%;
+    @include tablets {
+        display:none;
+    }
+}
+
+.popup__img {
+    width: 100%;
+    display: block;
+}
+
+.popup__desc {
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-stretch: normal;
+    letter-spacing: normal;
+    color: #d8e1e6;
+    display:flex;
+    flex-direction: column;
+
+    @include phones {
+        align-items: center;
+        text-align:center;
+        width:100%;
+    }
+}
+
+.popup__title {
+    margin-bottom: 15px;
+    @include phones {
+        margin-bottom:18px;
+    }
+}
+
+.popup__title-cost {
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    font-size: 54px;
+    font-weight: bold;
+    line-height: 1.19;
+    color: #00d065;
+}
+
+.popup__title-content {
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 1.25;
+    @include phones {
+        font-size: 24px;
+    }
+}
+
+.popup__text {
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    line-height: 1.5;
+    margin-bottom: 33px;
+    letter-spacing: 0.03em;
+    @include phones {
+        margin-bottom: 40px;
+    }
+}
+.popup__btn {
+    width: 304px;
+  height: 56px;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+  background-color: #20a86b;
+  border:none;
+  cursor:pointer;
+  font-size: 17px;
+  font-weight: bold;
+  line-height: 1.5;
+  text-align: center;
+  color:#fff;
+  transition: transform .3s;
+  &:active {
+      transform:scale(0.97);
+  }
+  &:focus{
+      outline:none;
+  }
+  @include phones {
+      width:100%;
+      max-width:288px;
+  }
 }

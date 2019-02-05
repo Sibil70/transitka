@@ -3,9 +3,7 @@
   "version": "0.1.0",
   "description": "test",
   "main": "index.js",
-  "scripts": {
-    
-  },
+  "scripts": {},
   "author": "Varnaev AE",
   "license": "ISC",
   "dependencies": {
