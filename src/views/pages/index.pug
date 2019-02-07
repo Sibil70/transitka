@@ -5,7 +5,6 @@ block variables
 block content
     main.main
         .main__left-col
-            .images
         .main__right-col
             .content-wrap
                 .main__logo
@@ -21,16 +20,15 @@ block content
                                 p.form__input-error-email 
                             label.form__input(for="email" @click = "deleteEmailError") 
                                 input.form__input-area.js-email-input(type="email", name="email", maxlength="100", v-model="email", id="email")
-                                span.form__placeholder Ваш e-mail
+                                span.form__placeholder Your email
                         .form__row
                             .error
                                 p.form__input-error-password  
                             label.form__input(for="password" @click = "deletePasswordError")
                                 input.form__input-area.js-password-input(type="password", name="password", v-model="password", id="password")
-                                span.form__placeholder Придумайте пароль
+                                span.form__placeholder Create a password
                         .form__row
                             .form__currency    
-                                .form__text Валюта для ввода и вывода средств
                                 .form__radio-btns
                                     input.form__radio-btn.form__radio-btn_dol(type="radio", id="dol", name="currency" checked)
                                     label.form__radio-fake(for="dol")
@@ -40,12 +38,13 @@ block content
                             .form__check-error
                                 p Примите соглашение об оказании услуг
                             input.input__check(type="checkbox", id="confirm", name="confirm")
-                            label.input__confirm(for="confirm" ) Я совершеннолетний, ознакомился и принимаю соглашение об оказании услуг.
+                            label.input__confirm(for="confirm" ) I am of legal age, and i have reviewed and accept 
+                                a.input__confirm-link(href="#") the service agreement 
                         .form__row(v-if = '!userConfirm')
                             .wrong-user
                                 p.wrong-user__txt Учётная запись с указанным e-mail уже существует
                         .form__row
-                            button(type='submit').form__btn Зарегистрироваться
+                            button(type='submit').form__btn Register
                 button.main__btn.js-main-btn(type="button") Start earning                         
 block scripts
     script(src='./assets/scripts/index.bundle.js')

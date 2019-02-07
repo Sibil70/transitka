@@ -14,9 +14,7 @@
     <div class="wrapper">
       <div class="container">
         <main class="main">
-          <div class="main__left-col">
-            <div class="images"></div>
-          </div>
+          <div class="main__left-col"></div>
           <div class="main__right-col">
             <div class="content-wrap">
               <div class="main__logo"><img class="logo" alt="olimp trade logo" src="./assets/images/popup/vertical/logo.png"/></div>
@@ -31,7 +29,7 @@
                       <p class="form__input-error-email"> </p>
                     </div>
                     <label class="form__input" for="email" @click="deleteEmailError"> 
-                      <input class="form__input-area js-email-input" type="email" name="email" maxlength="100" v-model="email" id="email"/><span class="form__placeholder">Ваш e-mail</span>
+                      <input class="form__input-area js-email-input" type="email" name="email" maxlength="100" v-model="email" id="email"/><span class="form__placeholder">Your email</span>
                     </label>
                   </div>
                   <div class="form__row">
@@ -39,12 +37,11 @@
                       <p class="form__input-error-password"> </p>
                     </div>
                     <label class="form__input" for="password" @click="deletePasswordError">
-                      <input class="form__input-area js-password-input" type="password" name="password" v-model="password" id="password"/><span class="form__placeholder">Придумайте пароль</span>
+                      <input class="form__input-area js-password-input" type="password" name="password" v-model="password" id="password"/><span class="form__placeholder">Create a password</span>
                     </label>
                   </div>
                   <div class="form__row">
                     <div class="form__currency">   
-                      <div class="form__text">Валюта для ввода и вывода средств</div>
                       <div class="form__radio-btns">
                         <input class="form__radio-btn form__radio-btn_dol" type="radio" id="dol" name="currency" checked="checked"/>
                         <label class="form__radio-fake" for="dol"></label>
@@ -58,7 +55,7 @@
                       <p>Примите соглашение об оказании услуг</p>
                     </div>
                     <input class="input__check" type="checkbox" id="confirm" name="confirm"/>
-                    <label class="input__confirm" for="confirm">Я совершеннолетний, ознакомился и принимаю соглашение об оказании услуг.</label>
+                    <label class="input__confirm" for="confirm">I am of legal age, and i have reviewed and accept <a class="input__confirm-link" href="#">the service agreement </a></label>
                   </div>
                   <div class="form__row" v-if="!userConfirm">
                     <div class="wrong-user">
@@ -66,7 +63,7 @@
                     </div>
                   </div>
                   <div class="form__row">
-                    <button class="form__btn" type="submit">Зарегистрироваться</button>
+                    <button class="form__btn" type="submit">Register</button>
                   </div>
                 </form>
               </div>

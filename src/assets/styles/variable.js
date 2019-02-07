@@ -7,7 +7,6 @@ module.exports = {
     "background": "#0b172af2",
     "input_bg": "#f5f8fa19", // 10% opacity
     "input_border": "#20A86B",
-    "input_border-hover": "#20A86B88",
     "error": "#E15433",
     "white": "#ffffff"
 };
