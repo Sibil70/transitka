@@ -7,22 +7,6 @@
     overflow: hidden;
     margin: 0 auto;
     align-items: center;
-    background: url(../images/prize1.png) 30% 70% no-repeat,
-    url(../images/prize2.png) 35% 30% no-repeat,
-    url(../images/obj-1.png) 50% 0 no-repeat,
-    url(../images/obj-2.png) 20% 0 no-repeat,
-    url(../images/obj-3.png) 12% 40% no-repeat,
-    url(../images/obj-4.png) 25% 43% no-repeat,
-    url(../images/obj-5.png) 14% 84% no-repeat,
-    url(../images/obj-6.png) 34% 101% no-repeat,
-    url(../images/obj-7.png) 87% 50% no-repeat,
-    url(../images/obj-8.png) 85% 0 no-repeat,
-    url(../images/obj-9.png) 86% 100% no-repeat,
-    url(../images/obj-10.png) 55% 100% no-repeat;
-    @include narrow{
-        background-position: 23% 70%,30% 30%,50% 0,10% 0,5% 40%,18% 43%,8% 84%,27% 101%,96% 50%,93% 0,93% 100%,55% 100%;
-    }
-
 }
  
  .main__left-col{

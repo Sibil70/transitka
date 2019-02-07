@@ -73,13 +73,13 @@ var app = new Vue({
       var emailField = document.querySelector('.form__input-error-email').parentNode,
         input = document.getElementById('email').parentNode;
       emailField.style.display = "none";
-      input.style.borderColor = "#20a86b";
+      input.removeAttribute( 'style' );
     },
     deletePasswordError: function () {
       var passField = document.querySelector('.form__input-error-password').parentNode,
         input = document.getElementById('password').parentNode;
       passField.style.display = "none";
-      input.style.borderColor = "#20a86b";
+      input.removeAttribute( 'style' );
     },
     deleteCheckError: function () {
       var checkError = document.querySelector('.form__check-error');
