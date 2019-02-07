@@ -1,5 +1,5 @@
-var emailInput = document.querySelector('.js-email-input'),
-    passwordInput = document.querySelector('.js-password-input');
+var emailInput = document.querySelector(".js-email-input"),
+    passwordInput = document.querySelector(".js-password-input");
 
 emailInput.addEventListener('blur', function(){
     if(emailInput.value.length > 0 ){
@@ -16,3 +16,5 @@ passwordInput.addEventListener('blur', function(){
         passwordInput.classList.remove('form__input-area--up')
     }
 });
+
+

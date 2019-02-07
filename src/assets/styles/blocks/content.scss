@@ -1,40 +1,41 @@
 .main{
     width: 100%;
     height: 100%;
-}
-.main__wrapper
- {
     display: flex;
-    justify-content: space-between;
     max-width: 1440px;
-    height: 100%;
+    max-height: 860px;
+    overflow: hidden;
     margin: 0 auto;
-    margin-left: 100px;
-        @include tablets{
-            margin-left: 0;
-            padding: 0 20px;
+    align-items: center;
+    background: url(../images/prize1.png) 30% 70% no-repeat,
+    url(../images/prize2.png) 35% 30% no-repeat,
+    url(../images/obj-1.png) 50% 0 no-repeat,
+    url(../images/obj-2.png) 20% 0 no-repeat,
+    url(../images/obj-3.png) 12% 40% no-repeat,
+    url(../images/obj-4.png) 25% 43% no-repeat,
+    url(../images/obj-5.png) 14% 84% no-repeat,
+    url(../images/obj-6.png) 34% 101% no-repeat,
+    url(../images/obj-7.png) 87% 50% no-repeat,
+    url(../images/obj-8.png) 85% 0 no-repeat,
+    url(../images/obj-9.png) 86% 100% no-repeat,
+    url(../images/obj-10.png) 55% 100% no-repeat;
+    @include narrow{
+        background-position: 23% 70%,30% 30%,50% 0,10% 0,5% 40%,18% 43%,8% 84%,27% 101%,96% 50%,93% 0,93% 100%,55% 100%;
     }
- }
+
+}
  
  .main__left-col{
     width: 100%;
-    max-width: 440px;
-    margin-right: 92px;
-    @include tablets {
-        width: 100%;
-        margin: 0 auto;
-        max-width: 600px;
-        display: flex;
-        flex-direction: column;
-    }
-    @include phones {
-        align-items: center;
-    }
+    max-width: 49%;
+    max-height: 860px;
 }
- .main__right-col{
-     width: 50%;
-     height: 100%;
-     @include tablets {
-         display: none;
-     }
- }
+ .main__right-col {
+    width: 51%;
+    height:100%;
+    max-height: 860px;
+    display:flex;
+    align-items:center;
+
+}
+

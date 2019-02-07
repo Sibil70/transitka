@@ -1,23 +1,69 @@
-.main__right-col{
-    width: 100%;
-    height: 100%;
+
+.content-wrap {
+    max-width:336px;
+    height:100%;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
 }
-.images{
+
+.main__logo {
+    width:175px;
     display: block;
-    width: 100%;
-    height: 100%;
-    position: relative;
+    margin-bottom:33px;
 }
-.image__wrapper{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+
+.main__title {
+    margin-bottom: 16px;
 }
-.image__iphone{
-    width: 245px;
-    position: absolute;
-    left: -5px;
-    bottom: 0;
+
+.main__title-cost {
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    font-size: 54px;
+    font-weight: bold;
+    line-height: 1.19;
+    color: $white;
+}
+
+.main__title-content {
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 1.25;
+}
+
+.main__text {
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    line-height: 1.5;
+    margin-bottom: 40px;
+}
+
+.main__btn {
+    width: 304px;
+    height: 56px;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+    background-color: #f31138;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 1;
+    text-align: center;
+    color: #fff;
+    transition: transform .3s;
+    &:active {
+        transform: scale(0.97);
+    }
+    &:focus {
+        outline: none;
+    }
+    @include phones {
+        width: 100%;
+        max-width: 288px;
+    }
+}
+
+.main__form {
+    display:none;
 }

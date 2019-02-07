@@ -4,50 +4,48 @@ block variables
     - var title = "Главная"
 block content
     main.main
-        .main__wrapper
-            .main__left-col
-                h1.main__title Начните торговать прямо сейчас
-                ul.main__list
-                    li.main__item Нет спреда — торгуйте с прозрачными и точными котировками
-                    li.main__item Достаточно депозита в $10, чтобы начать торговать
-                form.form.main__form(id="app", @submit="checkForm")
-                    .form__row
-                        .error
-                            p.form__input-error-email 
-                        label.form__input(for="email" @click = "deleteEmailError") 
-                            input.form__input-area.js-email-input(type="email", name="email", maxlength="100", v-model="email", id="email")
-                            span.form__placeholder Ваш e-mail
-                    .form__row
-                        .error
-                            p.form__input-error-password  
-                        label.form__input(for="password" @click = "deletePasswordError")
-                            input.form__input-area.js-password-input(type="password", name="password", v-model="password", id="password")
-                            span.form__placeholder Придумайте пароль
-                    .form__row
-                        .form__currency    
-                            .form__text Валюта для ввода и вывода средств
-                            .form__radio-btns
-                                input.form__radio-btn.form__radio-btn_rub(type="radio", id="rub", name="currency")
-                                label.form__radio-fake(for="rub")
-                                input.form__radio-btn.form__radio-btn_dol(type="radio", id="dol", name="currency")
-                                label.form__radio-fake(for="dol")
-                                input.form__radio-btn.form__radio-btn_eur(type="radio", id="eur", name="currency")
-                                label.form__radio-fake(for="eur")
-                    .form__row(@click = "deleteCheckError")
-                        .form__check-error
-                            p Примите соглашение об оказании услуг
-                        input.input__check(type="checkbox", id="confirm", name="confirm")
-                        label.input__confirm(for="confirm" ) Я совершеннолетний, ознакомился и принимаю соглашение об оказании услуг.
-                    .form__row(v-if = '!userConfirm')
-                        .wrong-user
-                            p.wrong-user__txt Учётная запись с указанным e-mail уже существует
-                    .form__row
-                        button(type='submit').form__btn Зарегистрироваться
-            .main__right-col
-                .images
-                    .image__wrappe
-                        img.image__macbook(src="./assets/images/mockups/macbook/dark.png", alt="macbook")
-                    .image__wrapper
-                        img.image__iphone(src="./assets/images/mockups/iphone/frontal-black.png", alt="macbook")                   
+        .main__left-col
+            .images
+        .main__right-col
+            .content-wrap
+                .main__logo
+                    img.logo(alt="olimp trade logo" src="./assets/images/popup/vertical/logo.png")
+                .main__title
+                    h2.main__title-cost $ 10 000
+                    span.main__title-content.main__title-content--en is already on your demo-account
+                .main__text We double your deposit
+                .main__form.js-reg-form
+                    form.form(id="app", @submit="checkForm")
+                        .form__row
+                            .error
+                                p.form__input-error-email 
+                            label.form__input(for="email" @click = "deleteEmailError") 
+                                input.form__input-area.js-email-input(type="email", name="email", maxlength="100", v-model="email", id="email")
+                                span.form__placeholder Ваш e-mail
+                        .form__row
+                            .error
+                                p.form__input-error-password  
+                            label.form__input(for="password" @click = "deletePasswordError")
+                                input.form__input-area.js-password-input(type="password", name="password", v-model="password", id="password")
+                                span.form__placeholder Придумайте пароль
+                        .form__row
+                            .form__currency    
+                                .form__text Валюта для ввода и вывода средств
+                                .form__radio-btns
+                                    input.form__radio-btn.form__radio-btn_dol(type="radio", id="dol", name="currency" checked)
+                                    label.form__radio-fake(for="dol")
+                                    input.form__radio-btn.form__radio-btn_eur(type="radio", id="eur", name="currency")
+                                    label.form__radio-fake(for="eur")
+                        .form__row(@click = "deleteCheckError")
+                            .form__check-error
+                                p Примите соглашение об оказании услуг
+                            input.input__check(type="checkbox", id="confirm", name="confirm")
+                            label.input__confirm(for="confirm" ) Я совершеннолетний, ознакомился и принимаю соглашение об оказании услуг.
+                        .form__row(v-if = '!userConfirm')
+                            .wrong-user
+                                p.wrong-user__txt Учётная запись с указанным e-mail уже существует
+                        .form__row
+                            button(type='submit').form__btn Зарегистрироваться
+                button.main__btn.js-main-btn(type="button") Start earning                         
 block scripts
     script(src='./assets/scripts/index.bundle.js')

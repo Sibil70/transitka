@@ -4,7 +4,7 @@ module.exports = {
     "text-color": "#d8e1e6",
     "placeholder": "#7a8f99",
     "border": "#1C945D",
-    "background": "#0b172a",
+    "background": "#0b172af2",
     "input_bg": "#f5f8fa19", // 10% opacity
     "input_border": "#20A86B",
     "input_border-hover": "#20A86B88",

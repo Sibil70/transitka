@@ -110,10 +110,11 @@
     left: -78px;
     -webkit-transform: translateY(-50%);
     transform: translateY(-50%);
-    background: url(../images/popup/obj_2.png) 100% 99% no-repeat/auto,
-                url(../images/popup/obj_1.png) 18% 29% no-repeat/auto,
-                url(../images/popup/prize_1.png) 6% 96% no-repeat/auto,
-                url(../images/popup/prize_2.png) 88% 1% no-repeat/auto;
+    background: url('../images/popup/obj_2.png') 100% 99% no-repeat,
+    url('../images/popup/obj_1.png') 18% 29% no-repeat,
+    url('../images/popup/prize_1.png') 6% 96% no-repeat,
+    url('../images/popup/prize_2.png') 88% 1% no-repeat;
+
     @include tablets {
         display:none;
     }

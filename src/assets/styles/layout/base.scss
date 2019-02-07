@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 
-h1{
+h1, h2,h3,h4,h5,h6{
     margin:0;
 }
 body, html {
@@ -16,18 +16,19 @@ body, html {
 }
 
 body{
-    font-family: 'roboto';
+    font-family: 'Open Sans', sans-serif;
     box-sizing: border-box;
     line-height: 1.42;
     color: $text-color;
 }
 
-input {outline: none;
+input {
+    outline: none;
 }
 
 input:-webkit-autofill {
-    box-shadow: inset 0 0 0 50px $input_bg !important;
-    -webkit-box-shadow: inset 0 0 0 50px $input_bg !important; /* Цвет фона */
+    box-shadow: inset 0 0 0 50px #212d3e !important;
+    -webkit-box-shadow: inset 0 0 0 50px #5b7a8e !important; /* Цвет фона */
     -webkit-text-fill-color: #fff !important; /* цвет текста */
     color: #fff !important; /* цвет текста */
 }
@@ -37,13 +38,18 @@ input:-webkit-autofill {
     min-height: 100%;
     position: relative;
     background-color: $background;
+    background-image: radial-gradient(circle at 49% 0, #004779, #00223d);
+    display:flex;
+    align-items: center;
 }
 
 .container{
     max-width: 1440px;
-    height: 100%;
+    height: 100vh;
     margin: 0 auto;
+    flex:1;
     display: flex;
     align-items: center;
+    justify-content: center;
     flex-direction: column;
 }
