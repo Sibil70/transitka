@@ -41,18 +41,16 @@
                     </label>
                   </div>
                   <div class="form__row">
-                    <div class="form__currency">   
-                      <div class="form__radio-btns">
-                        <input class="form__radio-btn form__radio-btn_dol" type="radio" id="dol" name="currency" checked="checked"/>
-                        <label class="form__radio-fake" for="dol"></label>
-                        <input class="form__radio-btn form__radio-btn_eur" type="radio" id="eur" name="currency"/>
-                        <label class="form__radio-fake" for="eur"></label>
-                      </div>
+                    <div class="form__radio-btns">
+                      <input class="form__radio-btn form__radio-btn_dol" type="radio" id="dol" name="currency" checked="checked"/>
+                      <label class="form__radio-fake" for="dol">  Dollar</label>
+                      <input class="form__radio-btn form__radio-btn_eur" type="radio" id="eur" name="currency"/>
+                      <label class="form__radio-fake" for="eur">Euro</label>
                     </div>
                   </div>
                   <div class="form__row" @click="deleteCheckError">
                     <div class="form__check-error">
-                      <p>Примите соглашение об оказании услуг</p>
+                      <p>Accept the service agreement</p>
                     </div>
                     <input class="input__check" type="checkbox" id="confirm" name="confirm"/>
                     <label class="input__confirm" for="confirm">I am of legal age, and i have reviewed and accept <a class="input__confirm-link" href="#">the service agreement </a></label>

@@ -28,15 +28,14 @@ block content
                                 input.form__input-area.js-password-input(type="password", name="password", v-model="password", id="password")
                                 span.form__placeholder Create a password
                         .form__row
-                            .form__currency    
-                                .form__radio-btns
-                                    input.form__radio-btn.form__radio-btn_dol(type="radio", id="dol", name="currency" checked)
-                                    label.form__radio-fake(for="dol")
-                                    input.form__radio-btn.form__radio-btn_eur(type="radio", id="eur", name="currency")
-                                    label.form__radio-fake(for="eur")
+                            .form__radio-btns
+                                input.form__radio-btn.form__radio-btn_dol(type="radio", id="dol", name="currency" checked)
+                                label.form__radio-fake(for="dol")   Dollar
+                                input.form__radio-btn.form__radio-btn_eur(type="radio", id="eur", name="currency")
+                                label.form__radio-fake(for="eur") Euro
                         .form__row(@click = "deleteCheckError")
                             .form__check-error
-                                p Примите соглашение об оказании услуг
+                                p Accept the service agreement
                             input.input__check(type="checkbox", id="confirm", name="confirm")
                             label.input__confirm(for="confirm" ) I am of legal age, and i have reviewed and accept 
                                 a.input__confirm-link(href="#") the service agreement 

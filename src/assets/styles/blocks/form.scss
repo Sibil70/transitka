@@ -2,6 +2,7 @@
     height: 0;
     overflow: hidden;
     transition: height .5s;
+    margin-bottom:5px;
 }
 .form {
     @include phones {
@@ -64,7 +65,7 @@
     flex: 1;
     border: 2px solid transparent;
     border-radius: 4px;
-    background-color: $input_bg;
+    background-color:#184363;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -131,7 +132,8 @@
     top: 50%;
     transform: translateY(-50%);
     transition: 0.2s ease all;
-    font-size: 16px
+    font-size: 16px;
+    color: $placeholder;
 }
 
 .form__input-area:focus~.form__placeholder,
@@ -142,15 +144,8 @@
     font-size: 12px;
 }
 
-.form__currency {
-    flex: 1;
-    display: flex;
-    justify-content: space-between;
-}
-
 .form__radio-btns {
     display: flex;
-    margin-right: 2px;
     width:100%;
     @include phones {
         margin-top: 3px;
@@ -158,15 +153,11 @@
 }
 
 .form__radio-fake {
-    position: relative;
     box-sizing: border-box;
     width: 50%;
     height: 56px;
-    display: block;
     cursor: pointer;
-    @include phones {
-        width: 60px;
-    }
+    font-size:0;
 }
 
 .form__radio-btn {
@@ -177,71 +168,35 @@
         box-sizing: border-box;
         width: 100%;
         height: 56px;
-        background-color: $input_bg;
+        background-color:#184363;
         border: 2px solid transparent;
-        position: absolute;
-        line-height: 56px;
-        text-align: center;
-        font-size: 24px;
-        @include phones {
-            width: 60px;
-        }
+
     }
     &_dol {
         &+.form__radio-fake:before {
-            content: "\0024";
+            background:url('../images/icons/dollar.png') center center no-repeat;
+            background-color:#184363;
+            border-radius: 8px 0px 0px 8px;
         }
     }
     &_eur {
         &+.form__radio-fake:before {
-            content: "\20AC";
-        }
-    }
-}
-
-.form__radio-btn_dol {
-    &+.form__radio-fake:before {
-        border-radius: 8px 0px 0px 8px
-    }
-}
-
-.form__radio-btn_eur {
-    &+.form__radio-fake:before {
-        border-radius: 0px 8px 8px 0px
-    }
-}
-
-.form__radio-btn:checked {
-    &+.form__radio-fake:before {
-        z-index: 1;
-        background-color: transparent;
-        transition: background-color 0.3s;
-    }
-}
-
-.form__radio-btn_dol:checked {
-    &+.form__radio-fake:before {
-        border: 1px solid $btn;
-        border-radius: 8px 0px 0px 8px;
-    }
-    &+.form__radio-fake:after {
-        border-right: 2px solid transparent;
+            background:url('../images/icons/euro.png') center center no-repeat;
+            background-color:#184363;
+            border-radius: 0px 8px 8px 0px;
+       }
     }
 }
 
 .form__radio-btn_dol:checked {
     &+.form__radio-fake:before {
         border: 2px solid $btn;
-    }
-    &+.form__radio-fake:after {
-        border-right: 2px solid transparent;
     }
 }
 
 .form__radio-btn_eur:checked {
     &+.form__radio-fake:before {
         border: 2px solid $btn;
-        border-radius: 0px 8px 8px 0px;
     }
 }
 
@@ -251,6 +206,7 @@
     cursor: pointer;
     font-size: 12px;
     user-select: none;
+    text-align: left;
     @include tablets {
         height: 32px;
     }
@@ -274,7 +230,7 @@
         width: 32px;
         height: 32px;
         border-radius: 4px;
-        background-color: $input_bg;
+        background-color: #184363;
         @include phones {
             width: 25px;
             height: 25px;
@@ -295,7 +251,7 @@
         transform: rotate(-50deg);
         @include phones {
             width: 15px;
-            height: 8px;
+            height: 5px;
             border-left: 2px solid $btn;
             border-bottom: 2px solid $btn;
         }

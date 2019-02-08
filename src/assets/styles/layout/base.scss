@@ -27,8 +27,8 @@ input {
 }
 
 input:-webkit-autofill {
-    box-shadow: inset 0 0 0 50px #212d3e !important;
-    -webkit-box-shadow: inset 0 0 0 50px #5b7a8e !important; /* Цвет фона */
+    box-shadow: inset 0 0 0 50px #184363 !important;
+    -webkit-box-shadow: inset 0 0 0 50px #184363 !important; /* Цвет фона */
     -webkit-text-fill-color: #fff !important; /* цвет текста */
     color: #fff !important; /* цвет текста */
 }
@@ -62,7 +62,15 @@ input:-webkit-autofill {
         
     }
     @include tablets {
-        background: radial-gradient(circle at 49% 0, #004779, #00223d);
+        background: url(../images/popup/vertical/obj_1.png) 8% 0 no-repeat,
+        url(../images/popup/vertical/obj_2.png) 50% 0 no-repeat,
+        url(../images/popup/vertical/obj_3.png) 95% 0 no-repeat,
+        url(../images/popup/vertical/obj_4.png) 6% 33% no-repeat,
+        url(../images/popup/vertical/obj_5.png) 18.5% 100% no-repeat,
+        url(../images/popup/vertical/obj_6.png) 87% 99% no-repeat,
+        url(../images/popup/vertical/prize_2_vertical.png) 18% 13.7% no-repeat,
+        url(../images/popup/vertical/prize_1_vertical.png) 91% 16% no-repeat,
+        radial-gradient(circle at 49% 0,#004779,#00223d);
     }
 }
 
