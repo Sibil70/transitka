@@ -101,13 +101,13 @@
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
     background-color: #f31138;
     border: none;
-    cursor: pointer;
     font-size: 16px;
     font-weight: bold;
-    line-height: 1;
+    line-height: 56px;
     text-align: center;
     color: #fff;
     transition: transform .3s;
+    text-decoration:none;
     &:active {
         transform: scale(0.97);
     }
