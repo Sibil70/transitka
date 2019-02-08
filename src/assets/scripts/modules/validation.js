@@ -45,17 +45,17 @@ var app = new Vue({
         emailField.firstChild.innerHTML = 'Введите почту';
       } else if (!this.validEmail(this.email)) {
         addError(emailField, inputEmail);
-        emailField.firstChild.innerHTML = 'Адрес не корректный';
+        emailField.firstChild.innerHTML = 'Incorrect email value';
       }
 
 
       if (!this.password) {
         addError(passField, inputPassword);
-        passField.firstChild.innerHTML = 'Введите пароль';
+        passField.firstChild.innerHTML = 'Input password';
       }
       if (this.password && length < 4) {
         addError(passField, inputPassword);
-        passField.firstChild.innerHTML = 'Пароль не менее 4х символов';
+        passField.firstChild.innerHTML = 'Password should be more than 4  simbols';
       }
 
       if (!checkBox.checked) {

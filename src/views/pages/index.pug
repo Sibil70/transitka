@@ -30,9 +30,9 @@ block content
                         .form__row
                             .form__radio-btns
                                 input.form__radio-btn.form__radio-btn_dol(type="radio", id="dol", name="currency" checked)
-                                label.form__radio-fake(for="dol")   Dollar
+                                label.form__radio-fake.form__radio-fake_dol(for="dol")   Dollar
                                 input.form__radio-btn.form__radio-btn_eur(type="radio", id="eur", name="currency")
-                                label.form__radio-fake(for="eur") Euro
+                                label.form__radio-fake.form__radio-fake_eur(for="eur") Euro
                         .form__row(@click = "deleteCheckError")
                             .form__check-error
                                 p Accept the service agreement

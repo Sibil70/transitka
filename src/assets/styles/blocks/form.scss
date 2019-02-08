@@ -152,42 +152,40 @@
     }
 }
 
+
+
+.form__radio-btn {
+    display: none;
+}
 .form__radio-fake {
     box-sizing: border-box;
     width: 50%;
     height: 56px;
     cursor: pointer;
     font-size:0;
-}
-
-.form__radio-btn {
-    display: none;
-    &+.form__radio-fake:before {
+    &:before{
         content: "";
         display: block;
         box-sizing: border-box;
         width: 100%;
         height: 56px;
-        background-color:#184363;
         border: 2px solid transparent;
-
     }
-    &_dol {
-        &+.form__radio-fake:before {
-            background:url('../images/icons/dollar.png') center center no-repeat;
-            background-color:#184363;
-            border-radius: 8px 0px 0px 8px;
+    &_dol{
+        background:url('../images/icons/dollar.png') center center no-repeat, #184363;
+        border-radius: 8px 0px 0px 8px;
+        z-index:1;
+        &:before {border-radius: 8px 0px 0px 8px;}
+    }
+    &_eur{
+        background:url('../images/icons/euro.png') center center no-repeat, #184363;
+        border-radius: 0px 8px 8px 0px;
+        z-index:1;
+        &:before{
+            border-radius: 0px 8px 8px 0px;
         }
     }
-    &_eur {
-        &+.form__radio-fake:before {
-            background:url('../images/icons/euro.png') center center no-repeat;
-            background-color:#184363;
-            border-radius: 0px 8px 8px 0px;
-       }
-    }
 }
-
 .form__radio-btn_dol:checked {
     &+.form__radio-fake:before {
         border: 2px solid $btn;
@@ -207,6 +205,7 @@
     font-size: 12px;
     user-select: none;
     text-align: left;
+    color: $placeholder;
     @include tablets {
         height: 32px;
     }
@@ -216,7 +215,7 @@
     }
 }
 .input__confirm-link{
-    color: $text-color;
+    color: $placeholder;
 }
 
 .input__check {
