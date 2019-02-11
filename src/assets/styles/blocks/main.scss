@@ -115,8 +115,8 @@
         outline: none;
     }
     @include phones {
-        width: 100%;
-        max-width: 288px;
+        width: 97%;
+        // max-width: 288px;
         margin-bottom: 72px;
     }
 }
