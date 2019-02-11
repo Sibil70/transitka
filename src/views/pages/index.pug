@@ -1,7 +1,7 @@
 extends ../main.layout.pug
 
 block variables
-    - var title = "Главная"
+    - var title = "Congratulations!"
 block content
     main.main
         .main__left-col
@@ -15,36 +15,6 @@ block content
                 .main__text We double your deposit
                 .main__form.js-reg-form
                     iframe(id="olymp-form" class="mbl1-form-reg" src="https://static.olymptrade.com/lands/affiliate-new-form/?target=blank&lang=ru")
-                    //- form.form(id="app", @submit="checkForm")
-                    //-     .form__row
-                    //-         .error
-                    //-             p.form__input-error-email 
-                    //-         label.form__input(for="email" @click = "deleteEmailError") 
-                    //-             input.form__input-area.js-email-input(type="email", name="email", maxlength="100", v-model="email", id="email")
-                    //-             span.form__placeholder Your email
-                    //-     .form__row
-                    //-         .error
-                    //-             p.form__input-error-password  
-                    //-         label.form__input(for="password" @click = "deletePasswordError")
-                    //-             input.form__input-area.js-password-input(type="password", name="password", v-model="password", id="password")
-                    //-             span.form__placeholder Create a password
-                    //-     .form__row
-                    //-         .form__radio-btns
-                    //-             input.form__radio-btn.form__radio-btn_dol(type="radio", id="dol", name="currency" checked)
-                    //-             label.form__radio-fake.form__radio-fake_dol(for="dol")   Dollar
-                    //-             input.form__radio-btn.form__radio-btn_eur(type="radio", id="eur", name="currency")
-                    //-             label.form__radio-fake.form__radio-fake_eur(for="eur") Euro
-                    //-     .form__row(@click = "deleteCheckError")
-                    //-         .form__check-error
-                    //-             p Accept the service agreement
-                    //-         input.input__check(type="checkbox", id="confirm", name="confirm")
-                    //-         label.input__confirm(for="confirm" ) I am of legal age, and i have reviewed and accept 
-                    //-             a.input__confirm-link(href="#") the service agreement 
-                    //-     .form__row(v-if = '!userConfirm')
-                    //-         .wrong-user
-                    //-             p.wrong-user__txt Учётная запись с указанным e-mail уже существует
-                    //-     .form__row
-                    //-         button(type='submit').form__btn Register
                 a.main__btn.js-main-btn(target="_blank" href="#") Start earning                         
 block scripts
     script(src='./assets/scripts/index.bundle.js')

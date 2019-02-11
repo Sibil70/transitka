@@ -61,7 +61,7 @@
 .main__title {
     margin-bottom: 16px;
     @include phones{
-        margin-bottom: 17px;
+        margin-bottom: 12px;
     }
 }
 
@@ -90,10 +90,14 @@
     line-height: 1.5;
     margin-bottom: 32px;
     @include phones {
-        margin-bottom:24px;
+        margin-bottom:15px;
     }
 }
-
+.main__form {
+    height: 0;
+    overflow: hidden;
+    transition: height .5s;
+}
 .main__btn {
     width: 278px;
     height: 56px;
@@ -116,7 +120,6 @@
     }
     @include phones {
         width: 97%;
-        // max-width: 288px;
         margin-bottom: 72px;
     }
 }
