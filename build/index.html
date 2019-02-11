@@ -23,7 +23,47 @@
               </div>
               <div class="main__text">We double your deposit</div>
               <div class="main__form js-reg-form">
-                <iframe class="mbl1-form-reg" id="olymp-form" src="https://static.olymptrade.com/lands/affiliate-new-form/?target=blank&amp;lang=ru"></iframe>
+                <form class="form" id="app" @submit="checkForm">
+                  <div class="form__row">
+                    <div class="error">
+                      <p class="form__input-error-email"> </p>
+                    </div>
+                    <label class="form__input" for="email" @click="deleteEmailError"> 
+                      <input class="form__input-area js-email-input" type="email" name="email" maxlength="100" v-model="email" id="email"/><span class="form__placeholder">Your email</span>
+                    </label>
+                  </div>
+                  <div class="form__row">
+                    <div class="error">
+                      <p class="form__input-error-password"> </p>
+                    </div>
+                    <label class="form__input" for="password" @click="deletePasswordError">
+                      <input class="form__input-area js-password-input" type="password" name="password" v-model="password" id="password"/><span class="form__placeholder">Create a password</span>
+                    </label>
+                  </div>
+                  <div class="form__row">
+                    <div class="form__radio-btns">
+                      <input class="form__radio-btn form__radio-btn_dol" type="radio" id="dol" name="currency" checked="checked"/>
+                      <label class="form__radio-fake form__radio-fake_dol" for="dol">  Dollar</label>
+                      <input class="form__radio-btn form__radio-btn_eur" type="radio" id="eur" name="currency"/>
+                      <label class="form__radio-fake form__radio-fake_eur" for="eur">Euro</label>
+                    </div>
+                  </div>
+                  <div class="form__row" @click="deleteCheckError">
+                    <div class="form__check-error">
+                      <p>Accept the service agreement</p>
+                    </div>
+                    <input class="input__check" type="checkbox" id="confirm" name="confirm"/>
+                    <label class="input__confirm" for="confirm">I am of legal age, and i have reviewed and accept <a class="input__confirm-link" href="#">the service agreement </a></label>
+                  </div>
+                  <div class="form__row" v-if="!userConfirm">
+                    <div class="wrong-user">
+                      <p class="wrong-user__txt">Учётная запись с указанным e-mail уже существует</p>
+                    </div>
+                  </div>
+                  <div class="form__row">
+                    <button class="form__btn" type="submit">Register</button>
+                  </div>
+                </form>
               </div><a class="main__btn js-main-btn" target="_blank" href="#">Start earning                         </a>
             </div>
           </div>
